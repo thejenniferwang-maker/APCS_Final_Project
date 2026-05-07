@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://bv80xwosq872p"]
+
+[ext_resource type="Script" uid="uid://e73cs4s8exi5" path="res://node_2d.gd" id="1_epypp"]
+[ext_resource type="Script" uid="uid://bi0u1f0r2xong" path="res://cup.gd" id="2_0hol4"]
+[ext_resource type="Script" uid="uid://3h7uimq4g3kc" path="res://the_drink.gd" id="3_q6r6c"]
+[ext_resource type="Script" uid="uid://bc4uxqotq12hf" path="res://boba.gd" id="4_0hol4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kdubu"]
+bg_color = Color(0.6, 0.6, 0.6, 0.11372549)
+border_width_left = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.9192229, 0.7200783, 0.9472099, 1)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_epypp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0hol4"]
+bg_color = Color(0.95227784, 0.73509705, 0.5378277, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q6r6c"]
+border_width_left = 4
+border_width_top = 5
+border_width_right = 5
+border_color = Color(0.20392157, 0.8, 0.8, 1)
+corner_detail = 16
+
+[node name="Node2D" type="Control" unique_id=1703226736]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_epypp")
+
+[node name="Cup" type="Panel" parent="." unique_id=410673212]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 184.0
+offset_right = 648.0
+offset_bottom = 488.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kdubu")
+script = ExtResource("2_0hol4")
+
+[node name="The Drink" type="Panel" parent="Cup" unique_id=2109933037]
+material = SubResource("CanvasItemMaterial_epypp")
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -88.0
+offset_top = 88.0
+offset_right = 88.0
+offset_bottom = 296.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0hol4")
+script = ExtResource("3_q6r6c")
+
+[node name="Boba" type="Panel" parent="Cup" unique_id=647650896]
+layout_mode = 0
+offset_left = -144.0
+offset_top = 112.0
+offset_right = -104.0
+offset_bottom = 152.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_q6r6c")
+script = ExtResource("4_0hol4")
+
+[node name="Cup2" type="Panel" parent="." unique_id=1276733039]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
