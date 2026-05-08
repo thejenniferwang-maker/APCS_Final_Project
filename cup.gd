@@ -1,12 +1,19 @@
 extends Panel
 
-@onready var drink_tea = $ "The Drink" #find the drink child node as soon as the game starts
-#saves it into a variable (drink_tea)
-
+func _on_regular_pressed() -> void:
+	pass # Replace with function body.
+	
+	
+var click_count = 0
 func _unhandled_input(event):
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index == MOUSE_BUTTON_LEFT:
-			$ "The Drink".visible = true
-			print("hellO")
-	# $ tell Godot to look inside the current node for a child node
+			
+			if click_count == 0:
+				$ "The Drink".visible = true
+				click_count += 1 # Set to 1 so the next click 
+			elif click_count == 1:
+				$ "Boba".visible = true
+				click_count += 1
+ 
 	
