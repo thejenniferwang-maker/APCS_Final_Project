@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bvgurw34d52fp"]
+
+[ext_resource type="Script" uid="uid://ddnmp3j3ya5qw" path="res://order.gd" id="1_vwbfx"]
+
+[node name="Order" type="Node2D" unique_id=1004506854]
+script = ExtResource("1_vwbfx")
+
+[node name="regularAndTapioca" type="Sprite2D" parent="." unique_id=1895178524]
+
+[node name="regularAnJelly" type="Sprite2D" parent="." unique_id=307533045]
+
+[node name="taroAndTapioca" type="Sprite2D" parent="." unique_id=937466383]
+
+[node name="taroAndJelly" type="Sprite2D" parent="." unique_id=1508829755]

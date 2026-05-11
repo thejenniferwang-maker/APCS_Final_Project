@@ -39,6 +39,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_kdubu")
 script = ExtResource("2_0hol4")
 
 [node name="The Drink" type="Panel" parent="Cup" unique_id=2109933037]
+visible = false
 material = SubResource("CanvasItemMaterial_epypp")
 layout_mode = 1
 anchors_preset = -1

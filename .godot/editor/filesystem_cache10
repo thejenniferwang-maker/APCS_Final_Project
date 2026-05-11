@@ -1,9 +1,13 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1778191393
+::res://::1778538397
 boba.gd::GDScript::2587921601838613135::1778190994::0::1::::<>Panel<><>0<>0<><>::
-cup.gd::GDScript::3000801949191976128::1778190994::0::1::::<>Panel<><>0<>0<><>::
+cup.gd::GDScript::3000801949191976128::1778191787::0::1::::<>Panel<><>0<>0<><>::
 icon.svg::CompressedTexture2D::8628906031423744675::1778190994::1778191393::1::::<><><>0<>0<>5298c66383a23cfc6033dccfd89402c3<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 node_2d.gd::GDScript::348520101149064634::1778190994::0::1::::<>Control<><>0<>0<><>::
-node_2d.tscn::PackedScene::3930071042036246893::1778190994::0::1::::<><><>0<>0<><>::uid://e73cs4s8exi5::::res://node_2d.gd<>uid://bi0u1f0r2xong::::res://cup.gd<>uid://3h7uimq4g3kc::::res://the_drink.gd<>uid://bc4uxqotq12hf::::res://boba.gd
+node_2d.tscn::PackedScene::3930071042036246893::1778276994::0::1::::<><><>0<>0<><>::uid://e73cs4s8exi5::::res://node_2d.gd<>uid://bi0u1f0r2xong::::res://cup.gd<>uid://3h7uimq4g3kc::::res://the_drink.gd<>uid://bc4uxqotq12hf::::res://boba.gd
+order.gd::GDScript::7397422369479291374::1778536796::0::1::::<>Node2D<><>0<>0<><>::
+order.tscn::PackedScene::3874018565058925925::1778536796::0::1::::<><><>0<>0<><>::uid://ddnmp3j3ya5qw::::res://order.gd
+star.png::CompressedTexture2D::8341708330572755640::1778538397::1778538397::1::::<><><>0<>0<>dce461c537668295ed1f87cb5501c2ac<>res://.godot/imported/star.png-19e2a8935edef1994254d9cf64a4c2d9.ctex::
+stars.gd::GDScript::1895594087206899215::1778537240::0::1::::<>Node2D<><>0<>0<><>::
 sprite_2d.gd::GDScript::6639577043423355535::1778190994::0::1::::<>Sprite2D<><>0<>0<><>::
 the_drink.gd::GDScript::1981717365280393158::1778190994::0::1::::<>Panel<><>0<>0<><>::
