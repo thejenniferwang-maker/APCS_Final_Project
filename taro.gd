@@ -1,5 +1,5 @@
 extends Panel
-
+#TARo
 	
 	
 var click_count = 0
@@ -14,4 +14,10 @@ func _unhandled_input(event):
 				$ "Boba".visible = true
 				click_count += 1
  
-	
+
+func _on_taro_flavor_button_down() -> void:
+	pass # Replace with function body.
+
+
+func _on_regular_button_down() -> void:
+	hide()
