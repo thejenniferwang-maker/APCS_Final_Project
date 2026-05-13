@@ -1,44 +1,52 @@
 [gd_scene format=3 uid="uid://bv80xwosq872p"]
 
 [ext_resource type="Script" uid="uid://e73cs4s8exi5" path="res://node_2d.gd" id="1_epypp"]
-[ext_resource type="Script" uid="uid://bi0u1f0r2xong" path="res://cup.gd" id="2_0hol4"]
+[ext_resource type="Script" uid="uid://bwxpw2xt0o8fu" path="res://regular_cup.gd" id="2_rj586"]
 [ext_resource type="Script" uid="uid://3h7uimq4g3kc" path="res://the_drink.gd" id="3_q6r6c"]
 [ext_resource type="Script" uid="uid://bc4uxqotq12hf" path="res://boba.gd" id="4_0hol4"]
+[ext_resource type="Texture2D" uid="uid://ppr0ek7jbtrc" path="res://boba.png" id="4_q6r6c"]
+[ext_resource type="Script" uid="uid://c7fnabfc1ghoh" path="res://taro.gd" id="6_4d7sh"]
+[ext_resource type="Texture2D" uid="uid://vpe8b0r7f2v1" path="res://TaroButton.png" id="6_d21ai"]
+[ext_resource type="Texture2D" uid="uid://dyiprk16fhlxp" path="res://Regular.png" id="7_rj586"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kdubu"]
 bg_color = Color(0.6, 0.6, 0.6, 0.11372549)
 border_width_left = 5
 border_width_right = 5
 border_width_bottom = 5
-border_color = Color(0.9192229, 0.7200783, 0.9472099, 1)
+border_color = Color(0.9028249, 0.98609, 0.9977655, 1)
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_epypp"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0hol4"]
-bg_color = Color(0.95227784, 0.73509705, 0.5378277, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d21ai"]
+bg_color = Color(0.71911913, 0.5594194, 0.49557346, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q6r6c"]
-border_width_left = 4
-border_width_top = 5
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ir8iy"]
+bg_color = Color(0.6, 0.6, 0.6, 0.03137255)
+border_width_left = 5
 border_width_right = 5
-border_color = Color(0.20392157, 0.8, 0.8, 1)
-corner_detail = 16
+border_width_bottom = 5
+border_color = Color(0.63285905, 0.7737562, 0.7333741, 1)
 
-[node name="Node2D" type="Control" unique_id=1703226736]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hqns4"]
+bg_color = Color(0.4939134, 0.5884261, 0.8613026, 1)
+
+[node name="Maker" type="Control" unique_id=1703226736]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_epypp")
 
-[node name="Cup" type="Panel" parent="." unique_id=410673212]
+[node name="Regular cup" type="Panel" parent="." unique_id=410673212]
 layout_mode = 0
-offset_left = 456.0
-offset_top = 184.0
-offset_right = 648.0
-offset_bottom = 488.0
+offset_left = 671.0
+offset_top = 210.0
+offset_right = 863.0
+offset_bottom = 514.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_kdubu")
-script = ExtResource("2_0hol4")
+script = ExtResource("2_rj586")
 
-[node name="The Drink" type="Panel" parent="Cup" unique_id=2109933037]
+[node name="The Drink" type="Panel" parent="Regular cup" unique_id=2109933037]
+
 visible = false
 material = SubResource("CanvasItemMaterial_epypp")
 layout_mode = 1
@@ -49,20 +57,77 @@ offset_left = -88.0
 offset_top = 88.0
 offset_right = 88.0
 offset_bottom = 296.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_0hol4")
+theme_override_styles/panel = SubResource("StyleBoxFlat_d21ai")
 script = ExtResource("3_q6r6c")
 
-[node name="Boba" type="Panel" parent="Cup" unique_id=647650896]
+[node name="Boba" type="TextureRect" parent="Regular cup" unique_id=302024474]
+visible = false
 layout_mode = 0
-offset_left = -144.0
-offset_top = 112.0
-offset_right = -104.0
-offset_bottom = 152.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_q6r6c")
+offset_left = -28.0
+offset_top = 101.0
+offset_right = 225.0
+offset_bottom = 415.0
+texture = ExtResource("4_q6r6c")
+expand_mode = 1
 script = ExtResource("4_0hol4")
 
-[node name="Cup2" type="Panel" parent="." unique_id=1276733039]
+[node name="Taro" type="Panel" parent="." unique_id=602833712]
+layout_mode = 0
+offset_left = 671.0
+offset_top = 210.0
+offset_right = 863.0
+offset_bottom = 514.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ir8iy")
+script = ExtResource("6_4d7sh")
+
+[node name="The Drink" type="Panel" parent="Taro" unique_id=693365115]
 visible = false
+layout_mode = 0
+offset_left = 7.0
+offset_top = 88.0
+offset_right = 186.0
+offset_bottom = 296.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hqns4")
+
+[node name="Boba" type="TextureRect" parent="Taro" unique_id=1552543714]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Taro Flavor" type="Button" parent="." unique_id=792355996]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 181.0
+offset_top = 361.0
+offset_right = 842.0
+offset_bottom = 753.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+text = "
+
+"
+icon = ExtResource("6_d21ai")
+
+[node name="Regular" type="Button" parent="." unique_id=1273962014]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 181.0
+offset_top = 232.0
+offset_right = 844.0
+offset_bottom = 621.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+icon = ExtResource("7_rj586")
+
+[connection signal="button_down" from="Taro Flavor" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="Taro Flavor" to="Regular cup" method="_on_taro_flavor_button_down"]
+[connection signal="button_down" from="Taro Flavor" to="Taro" method="_on_taro_flavor_button_down"]
+[connection signal="button_down" from="Regular" to="." method="_on_regular_button_down"]
+[connection signal="button_down" from="Regular" to="Regular cup" method="_on_regular_button_down"]
+[connection signal="button_down" from="Regular" to="Taro" method="_on_regular_button_down"]
