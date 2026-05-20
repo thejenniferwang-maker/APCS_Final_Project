@@ -2,10 +2,13 @@
 
 [ext_resource type="Script" uid="uid://ddnmp3j3ya5qw" path="res://order.gd" id="1_vwbfx"]
 
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_vwbfx"]
+
 [node name="Order" type="Node2D" unique_id=1004506854]
 script = ExtResource("1_vwbfx")
 
 [node name="regularAndTapioca" type="Sprite2D" parent="." unique_id=1895178524]
+texture = SubResource("PlaceholderTexture2D_vwbfx")
 
 [node name="regularAnJelly" type="Sprite2D" parent="." unique_id=307533045]
 

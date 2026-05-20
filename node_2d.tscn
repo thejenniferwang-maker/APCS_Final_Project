@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://bv80xwosq872p"]
 
 [ext_resource type="Script" uid="uid://e73cs4s8exi5" path="res://node_2d.gd" id="1_epypp"]
-[ext_resource type="Script" uid="uid://bwxpw2xt0o8fu" path="res://regular_cup.gd" id="2_rj586"]
+[ext_resource type="Script" path="res://regular_cup.gd" id="2_rj586"]
 [ext_resource type="Script" uid="uid://3h7uimq4g3kc" path="res://the_drink.gd" id="3_q6r6c"]
 [ext_resource type="Script" uid="uid://bc4uxqotq12hf" path="res://boba.gd" id="4_0hol4"]
 [ext_resource type="Texture2D" uid="uid://ppr0ek7jbtrc" path="res://boba.png" id="4_q6r6c"]
-[ext_resource type="Script" uid="uid://c7fnabfc1ghoh" path="res://taro.gd" id="6_4d7sh"]
+[ext_resource type="Script" path="res://taro.gd" id="6_4d7sh"]
 [ext_resource type="Texture2D" uid="uid://vpe8b0r7f2v1" path="res://TaroButton.png" id="6_d21ai"]
 [ext_resource type="Texture2D" uid="uid://dyiprk16fhlxp" path="res://Regular.png" id="7_rj586"]
+[ext_resource type="PackedScene" uid="uid://brfpfukhhcmbn" path="res://stars.tscn" id="9_4d7sh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kdubu"]
 bg_color = Color(0.6, 0.6, 0.6, 0.11372549)
@@ -46,7 +47,6 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_kdubu")
 script = ExtResource("2_rj586")
 
 [node name="The Drink" type="Panel" parent="Regular cup" unique_id=2109933037]
-
 visible = false
 material = SubResource("CanvasItemMaterial_epypp")
 layout_mode = 1
@@ -124,6 +124,8 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.2, 0.2)
 icon = ExtResource("7_rj586")
+
+[node name="Stars" parent="." unique_id=1722394855 instance=ExtResource("9_4d7sh")]
 
 [connection signal="button_down" from="Taro Flavor" to="." method="_on_button_button_down"]
 [connection signal="button_down" from="Taro Flavor" to="Regular cup" method="_on_taro_flavor_button_down"]
