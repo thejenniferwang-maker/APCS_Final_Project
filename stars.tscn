@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://brfpfukhhcmbn"]
+
+[ext_resource type="Script" uid="uid://2aifmi6p5ibn" path="res://stars.gd" id="1_opvdl"]
+[ext_resource type="Texture2D" uid="uid://dq31ynnjh850w" path="res://star.png" id="2_t8hj0"]
+[ext_resource type="PackedScene" uid="uid://bvgurw34d52fp" path="res://order.tscn" id="3_t8hj0"]
+
+[node name="Stars" type="Node2D" unique_id=1722394855]
+script = ExtResource("1_opvdl")
+
+[node name="star1" type="Sprite2D" parent="." unique_id=299421748]
+position = Vector2(211, 457)
+texture = ExtResource("2_t8hj0")
+
+[node name="star2" type="Sprite2D" parent="." unique_id=298147337]
+position = Vector2(537, 229)
+texture = ExtResource("2_t8hj0")
+
+[node name="star3" type="Sprite2D" parent="." unique_id=312920410]
+position = Vector2(925, 439)
+texture = ExtResource("2_t8hj0")
+
+[node name="Order" parent="." unique_id=1004506854 instance=ExtResource("3_t8hj0")]

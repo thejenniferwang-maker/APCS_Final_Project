@@ -6,11 +6,11 @@
 [ext_resource type="Script" uid="uid://3h7uimq4g3kc" path="res://the_drink.gd" id="3_q6r6c"]
 [ext_resource type="Script" uid="uid://bc4uxqotq12hf" path="res://boba.gd" id="4_0hol4"]
 [ext_resource type="Texture2D" uid="uid://ppr0ek7jbtrc" path="res://boba.png" id="4_q6r6c"]
-[ext_resource type="Script" uid="uid://c7fnabfc1ghoh" path="res://taro.gd" id="6_4d7sh"]
+[ext_resource type="Script" path="res://taro.gd" id="6_4d7sh"]
 [ext_resource type="Texture2D" uid="uid://vpe8b0r7f2v1" path="res://TaroButton.png" id="6_d21ai"]
 [ext_resource type="Texture2D" uid="uid://dyiprk16fhlxp" path="res://Regular.png" id="7_rj586"]
-[ext_resource type="Texture2D" uid="uid://br047qe8gi2jf" path="res://Screenshot 2026-05-19 at 10.52.29 PM.png" id="10_hqns4"]
-[ext_resource type="Texture2D" uid="uid://bw75xseae5lgv" path="res://Screenshot 2026-05-19 at 10.57.13 PM.png" id="11_x0ka3"]
+[ext_resource type="PackedScene" uid="uid://brfpfukhhcmbn" path="res://stars.tscn" id="9_4d7sh"]
+[ext_resource type="PackedScene" uid="uid://bvgurw34d52fp" path="res://order.tscn" id="9_ir8iy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kdubu"]
 bg_color = Color(0.6, 0.6, 0.6, 0.11372549)
@@ -149,6 +149,9 @@ offset_right = 1726.0
 offset_bottom = 832.0
 scale = Vector2(0.16453943, 0.15674257)
 icon = ExtResource("11_x0ka3")
+[node name="Order" parent="." unique_id=1004506854 instance=ExtResource("9_ir8iy")]
+
+[node name="Stars" parent="." unique_id=1722394855 instance=ExtResource("9_4d7sh")]
 
 [connection signal="button_down" from="Taro Flavor" to="." method="_on_button_button_down"]
 [connection signal="button_down" from="Taro Flavor" to="Regular cup" method="_on_taro_flavor_button_down"]
