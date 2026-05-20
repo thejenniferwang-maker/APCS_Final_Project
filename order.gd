@@ -1,5 +1,8 @@
 extends Node2D
 
+var drinkOrder
+var toppingOrder
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$regularAndTapioca.visible = false
@@ -7,8 +10,8 @@ func _ready() -> void:
 	$taroAndTapioca.visible = false
 	$taroAndJelly.visible = false
 	
-	var drinkOrder = ["regular", "taro"].pick_random()
-	var toppingOrder = ["tapioca", "jelly"].pick_random()
+	drinkOrder = ["regular", "taro"].pick_random()
+	toppingOrder = ["tapioca", "jelly"].pick_random()
 	
 	if drinkOrder == "regular" and toppingOrder == "tapioca":
 		$regularAndTapioca.visible = true

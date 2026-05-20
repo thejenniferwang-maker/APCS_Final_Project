@@ -10,7 +10,7 @@ script = ExtResource("1_vwbfx")
 [node name="regularAndTapioca" type="Sprite2D" parent="." unique_id=1895178524]
 texture = SubResource("PlaceholderTexture2D_vwbfx")
 
-[node name="regularAnJelly" type="Sprite2D" parent="." unique_id=307533045]
+[node name="regularAndJelly" type="Sprite2D" parent="." unique_id=307533045]
 
 [node name="taroAndTapioca" type="Sprite2D" parent="." unique_id=937466383]
 
