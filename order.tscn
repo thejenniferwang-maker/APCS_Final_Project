@@ -1,17 +1,24 @@
 [gd_scene format=3 uid="uid://bvgurw34d52fp"]
 
 [ext_resource type="Script" uid="uid://ddnmp3j3ya5qw" path="res://order.gd" id="1_vwbfx"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_vwbfx"]
+[ext_resource type="Texture2D" uid="uid://du65262xif80f" path="res://icon.svg" id="2_vdalh"]
 
 [node name="Order" type="Node2D" unique_id=1004506854]
 script = ExtResource("1_vwbfx")
 
 [node name="regularAndTapioca" type="Sprite2D" parent="." unique_id=1895178524]
-texture = SubResource("PlaceholderTexture2D_vwbfx")
+position = Vector2(136, 141)
+scale = Vector2(-0.86410147, 0.9360476)
+texture = ExtResource("2_vdalh")
 
 [node name="regularAndJelly" type="Sprite2D" parent="." unique_id=307533045]
+position = Vector2(387, 123)
+texture = ExtResource("2_vdalh")
 
 [node name="taroAndTapioca" type="Sprite2D" parent="." unique_id=937466383]
+position = Vector2(667, 118)
+texture = ExtResource("2_vdalh")
 
 [node name="taroAndJelly" type="Sprite2D" parent="." unique_id=1508829755]
+position = Vector2(939, 146)
+texture = ExtResource("2_vdalh")
