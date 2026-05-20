@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bv80xwosq872p"]
 
 [ext_resource type="Script" uid="uid://e73cs4s8exi5" path="res://node_2d.gd" id="1_epypp"]
+[ext_resource type="Texture2D" uid="uid://dasctlwa5gago" path="res://Screenshot 2026-05-13 at 2.14.28 PM.png" id="2_4d7sh"]
 [ext_resource type="Script" uid="uid://bwxpw2xt0o8fu" path="res://regular_cup.gd" id="2_rj586"]
 [ext_resource type="Script" uid="uid://3h7uimq4g3kc" path="res://the_drink.gd" id="3_q6r6c"]
 [ext_resource type="Script" uid="uid://bc4uxqotq12hf" path="res://boba.gd" id="4_0hol4"]
@@ -8,6 +9,8 @@
 [ext_resource type="Script" uid="uid://c7fnabfc1ghoh" path="res://taro.gd" id="6_4d7sh"]
 [ext_resource type="Texture2D" uid="uid://vpe8b0r7f2v1" path="res://TaroButton.png" id="6_d21ai"]
 [ext_resource type="Texture2D" uid="uid://dyiprk16fhlxp" path="res://Regular.png" id="7_rj586"]
+[ext_resource type="Texture2D" uid="uid://br047qe8gi2jf" path="res://Screenshot 2026-05-19 at 10.52.29 PM.png" id="10_hqns4"]
+[ext_resource type="Texture2D" uid="uid://bw75xseae5lgv" path="res://Screenshot 2026-05-19 at 10.57.13 PM.png" id="11_x0ka3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kdubu"]
 bg_color = Color(0.6, 0.6, 0.6, 0.11372549)
@@ -36,12 +39,32 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_epypp")
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=226561053]
+custom_minimum_size = Vector2(7, 0)
+layout_mode = 0
+offset_top = 2.0
+offset_right = 1152.0
+offset_bottom = 654.0
+texture = ExtResource("2_4d7sh")
+expand_mode = 1
+
+[node name="Boba" type="TextureRect" parent="." unique_id=302024474]
+visible = false
+layout_mode = 0
+offset_left = 444.0
+offset_top = 309.0
+offset_right = 697.0
+offset_bottom = 623.0
+texture = ExtResource("4_q6r6c")
+expand_mode = 1
+script = ExtResource("4_0hol4")
+
 [node name="Regular cup" type="Panel" parent="." unique_id=410673212]
 layout_mode = 0
-offset_left = 671.0
-offset_top = 210.0
-offset_right = 863.0
-offset_bottom = 514.0
+offset_left = 472.0
+offset_top = 208.0
+offset_right = 664.0
+offset_bottom = 512.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_kdubu")
 script = ExtResource("2_rj586")
 
@@ -59,23 +82,12 @@ offset_bottom = 296.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_d21ai")
 script = ExtResource("3_q6r6c")
 
-[node name="Boba" type="TextureRect" parent="Regular cup" unique_id=302024474]
-visible = false
-layout_mode = 0
-offset_left = -28.0
-offset_top = 101.0
-offset_right = 225.0
-offset_bottom = 415.0
-texture = ExtResource("4_q6r6c")
-expand_mode = 1
-script = ExtResource("4_0hol4")
-
 [node name="Taro" type="Panel" parent="." unique_id=602833712]
 layout_mode = 0
-offset_left = 671.0
-offset_top = 210.0
-offset_right = 863.0
-offset_bottom = 514.0
+offset_left = 472.0
+offset_top = 208.0
+offset_right = 664.0
+offset_bottom = 512.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ir8iy")
 script = ExtResource("6_4d7sh")
 
@@ -88,20 +100,15 @@ offset_right = 186.0
 offset_bottom = 296.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_hqns4")
 
-[node name="Boba" type="TextureRect" parent="Taro" unique_id=1552543714]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
 [node name="Taro Flavor" type="Button" parent="." unique_id=792355996]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 181.0
-offset_top = 361.0
-offset_right = 842.0
-offset_bottom = 753.0
+offset_left = 120.0
+offset_top = 360.0
+offset_right = 781.0
+offset_bottom = 752.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.2, 0.2)
@@ -115,14 +122,33 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 181.0
+offset_left = 120.0
 offset_top = 232.0
-offset_right = 844.0
+offset_right = 783.0
 offset_bottom = 621.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.2, 0.2)
 icon = ExtResource("7_rj586")
+
+[node name="Jelly Topping2" type="Button" parent="." unique_id=1151056702]
+layout_mode = 0
+offset_left = 904.0
+offset_top = 229.0
+offset_right = 1732.0
+offset_bottom = 689.0
+scale = Vector2(0.1675548, 0.17766361)
+button_mask = 0
+icon = ExtResource("10_hqns4")
+
+[node name="Boba Topping" type="Button" parent="." unique_id=1860507536]
+layout_mode = 0
+offset_left = 900.00006
+offset_top = 365.99997
+offset_right = 1726.0
+offset_bottom = 832.0
+scale = Vector2(0.16453943, 0.15674257)
+icon = ExtResource("11_x0ka3")
 
 [connection signal="button_down" from="Taro Flavor" to="." method="_on_button_button_down"]
 [connection signal="button_down" from="Taro Flavor" to="Regular cup" method="_on_taro_flavor_button_down"]
@@ -130,3 +156,4 @@ icon = ExtResource("7_rj586")
 [connection signal="button_down" from="Regular" to="." method="_on_regular_button_down"]
 [connection signal="button_down" from="Regular" to="Regular cup" method="_on_regular_button_down"]
 [connection signal="button_down" from="Regular" to="Taro" method="_on_regular_button_down"]
+[connection signal="button_down" from="Boba Topping" to="Boba" method="_on_boba_topping_button_down"]
